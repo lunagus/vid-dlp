@@ -1,48 +1,48 @@
-# vid-dlp
+# 📼 vid-dlp
 
-A simple and powerful Python tool to download files by searching, crawling and extracting encrypted links. 
+[![Python Version](https://img.shields.io/badge/python-3.8%2B-blue)](https://www.python.org/) [![License](https://img.shields.io/badge/license-MIT-green)](#)
+
+A **robust**, **reliable**, and **user-friendly** Python application for **searching**, **decrypting**, and **downloading** video and audio content from a variety of websites — completely **ad-free** and **automated**.
 
 # WHY?
 
-I wanted an easy way to automatically download video files and extract their audio from multiple websites and without being bothered by ads or unnecessary interaction. This script uses modern technologies and amazing tools like playwright, yt-dlp and ffmpeg to achieve this seamlessly.
+I wanted an easy way to automatically download video files and extract their audio from multiple websites and without being bothered by ads or unnecessary interaction. **vid-dlp** addresses these challenges by providing a seamless, headless experience. Ideal for educators, content creators, researchers, and casual users, this tool ensures **high reliability** through automated link decryption, **minimal intervention** with headless automation and a **clean output** organized in a dedicated `downloads/` directory.
 
-## 🚀 Quick Start
+## 🎯 Requirements
 
-### Step 1: Install Python
-First, you need Python installed on your computer:
+First, you need **Python** installed on your computer:
 - **Windows**: Download from [python.org](https://python.org) and run the installer
 - **Mac**: Download from [python.org](https://python.org) or use `brew install python`
 - **Linux**: Usually pre-installed, or run `sudo apt install python3`
 
-### Step 2: Download This Tool
-1. Download all the files in this folder to your computer
-2. Open a command prompt/terminal in this folder
+---
 
-### Step 3: Install Dependencies
-Run these commands one by one:
+## 🚀 Quick Start
 
-```bash
-# Install Python packages
-pip install requests beautifulsoup4 pycryptodome playwright yt-dlp
+1. **Clone the Repository**
+    ```bash
+    git clone https://github.com/lunagus/vid-dlp.git
+    cd vid-dlp
+    ```
+    💡 Alternatively, download the ZIP archive and extract it.
 
-# Install the browser
-playwright install firefox
-```
+2. **Install Dependencies**
+    ```bash
+    pip install -r requirements.txt
+    playwright install firefox
+    ```
 
-### Step 4: Install FFmpeg (For Audio Downloads)
-- **Windows**: Download from [ffmpeg.org](https://ffmpeg.org/download.html), extract to a folder, and add that folder to your PATH
-- **Mac**: Run `brew install ffmpeg` in terminal
-- **Linux**: Run `sudo apt install ffmpeg` (Ubuntu) or `sudo yum install ffmpeg` (CentOS)
+3. **Run the Application**
+    ```bash
+    python downloader.py
+    ```
 
-### Step 5: Run the Tool
-```bash
-python downloader.py
-```
+---
 
 ## 📖 How to Use (Step by Step)
 
 1. **Run the script**: Type `python downloader.py` and press Enter
-2. **Enter video title**: Type the name of what you want to download (e.g., "Harry Potter 4")
+2. **Enter video title**: Type the name of what you want to download
 3. **Choose language**: Pick your preferred language (Latino/Español/Inglés)
 4. **Customize options** (optional): Choose between:
    - Video + Audio (full video file)
@@ -51,6 +51,8 @@ python downloader.py
    - Search for your video
    - Find the best quality version
    - Download it to the `downloads` folder
+
+---
 
 ## 🎯 Features
 
@@ -63,31 +65,29 @@ python downloader.py
 - 📝 **Subtitles**: Automatically downloads subtitles when available
 - 📁 **Organized**: Saves everything to a `downloads` folder
 
-### Troubleshooting Common Issues
+## 🛠️ Technology Stack
 
-**"Python not found"**
-- Make sure Python is installed and added to your PATH
-- Try `python3` instead of `python`
+- **Python 3.8+**
+- **Playwright**: Headless browser automation
+- **yt-dlp**: Advanced media downloader
+- **FFmpeg**: Media processing and audio conversion
+- **BeautifulSoup4**: HTML parsing
+- **PyCryptodome**: Cryptographic operations
 
-**"Module not found"**
-- Run: `pip install requests beautifulsoup4 pycryptodome playwright yt-dlp`
+---
 
-**"Playwright browser not found"**
-- Run: `playwright install firefox`
+## 🔧 Troubleshooting
 
-**"FFmpeg not found"**
-- Install FFmpeg from [ffmpeg.org](https://ffmpeg.org/download.html)
-- Make sure it's in your system PATH
+| Issue                      | Solution                                                                      |
+|----------------------------|-------------------------------------------------------------------------------|
+| `python` not recognized    | Ensure Python 3.8+ is installed and added to PATH.                           |
+| Missing modules            | Run `pip install -r requirements.txt`.                                        |
+| Playwright browser errors  | Execute `playwright install firefox`.                                         |
+| FFmpeg not found           | Install FFmpeg and verify in system PATH.                                      |
+| No results                | Try broader search terms or check network connectivity.                       |
+| Download failures         | Retry later; source may be temporarily unavailable.                           |
 
-**"No results found"**
-- Try different search terms
-- Check your internet connection
-- The video might not be available
-
-**"Download failed"**
-- Check your internet connection
-- Try again later
-- The video source might be temporarily unavailable
+---
 
 ## 🔮 Future Implementations
 
@@ -99,6 +99,22 @@ python downloader.py
 | **Advanced Options** | Quality selection, format choices, and download preferences |
 | **Download Queue** | Manage multiple downloads with progress tracking |
 | **Batch Downloads** | Download multiple videos simultaneously |
+
+---
+
+## 🤝 Contributing
+
+This project is constantly being improved. Check back regularly for updates and new features or reach out to suggest your own!
+
+Any contributions are welcome! To get started:
+
+1. Fork the repository.
+2. Create a new branch: `git checkout -b feature/your-feature`
+3. Commit changes: `git commit -m 'Add new feature'`
+4. Push: `git push origin feature/your-feature`
+5. Open a Pull Request.
+
+---
 
 ## 🛡️ Legal and Ethical Considerations
 
@@ -116,4 +132,8 @@ Please respect:
 
 ---
 
-**Note**: This tool is constantly being improved. Check back regularly for updates and new features!
+## 📄 License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
